@@ -1,0 +1,71 @@
+.wraper-box {
+	width: 600px;
+	height: 600px;
+	background: lightblue;
+	position: relative;
+
+/*	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	transition-delay: 2s;*/
+	transition: all 0.5s linear 2s;
+}
+.child-box {
+	width: 150px;
+	height: 150px;
+	background: yellow;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)  rotate(45deg);
+
+/*	transition-property: all;
+	transition-duration: 0.5s;*/
+	transition: all 0.5s;
+}
+
+/*hover*/
+.wraper-box:hover {
+	background: rgb(92, 179, 0);
+}
+.child-box:hover {
+	background: hsl(204, 100%, 50%);
+	transform:translate(-50%, -50%) rotate(0deg);
+	/*width: 300px;*/
+}
+/*.wraper-box:hover .child-box {
+	background: red;
+}*/
+
+/*car animation*/
+.car-image {
+	height: 100px;
+/*	animation-name: carmove;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-delay: 2s;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;*/
+	animation: carmovenewanimation 4s infinite ease-in-out alternate 2s;
+	/*position: absolute;*/
+}
+.car-animation {
+	/*position: relative;*/
+}
+/*keyframes*/
+@keyframes carmove {
+	from {left: 0}
+	to {left: 800px;}
+}
+
+
+/*@keyframes carmove {
+	0% {left: 0}
+	25% {left: 200px;}
+	50% {left: 400px;}
+}*/
+
+@keyframes carmovenewanimation {
+	from {transform: translateX(0px);}
+	to {transform: translateX(800px);}
+}
